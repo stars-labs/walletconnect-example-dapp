@@ -172,7 +172,7 @@ class App extends React.Component<any, any> {
     // check if already connected
     if (!connector.connected) {
       // create new session
-      await connector.createSession();
+      await connector.createSession({chainId:this.state.chainId});
     }
 
     // subscribe to events
